@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+body {
+  margin: 0 5px; /* 0 to stick perfect on left side*/
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.vertical-menu {
+    width: 150px;
+    border-style: solid;
+    position: fixed;  /* This makes it stick on side */
+  }
+  
+  .vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none; /* Deletes the underline */
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc;
+  }
+  
+  .vertical-menu a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
