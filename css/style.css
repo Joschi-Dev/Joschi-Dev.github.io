@@ -2,26 +2,41 @@
   box-sizing: border-box;
 }
 
-header {
+header { /* Sticky header */
   text-align: center;
   position: sticky;
   top: 0;
-  background-color: white;
-  z-index: 1;
+  background-color: #eee;
+  color:  rgb(48, 48, 48);
+/*   z-index: 1;  */ 
 }
 
 body {
-  margin: 0 5px; /* 0 to stick perfect on left side*/
+
+  margin: 0px; /* 0 20px /5px / 0 to stick perfect on left side*/
+  background-color: rgb(22, 22, 22);
 }
 
 h1 {
   margin: 0;
-  padding: 20px 0;
+  padding: 0;
+
 }
 
+h2, h3  { 
+  text-align: center;
+  border-style: solid;
+  border-radius: 25px;
+  background-color: rgb(48, 48, 48);
+  color: #eee;
+}
+
+
+/* ---VERTICAL MENU v.01--- */
 .vertical-menu {
-    width: 150px;
+    width: 75px;
     border-style: solid;
+    border-color:rgb(22, 22, 22); /* ROOKIE-FIX TO HAVE SPACE BETWEEN NAV AND CONTENT */
     position: fixed;  /* This makes it stick on side */
   }
   
@@ -30,7 +45,7 @@ h1 {
     color: black;
     display: block;
     padding: 12px;
-    text-decoration: none; /* Deletes the underline */
+    text-decoration: none; /* Deletes the underlines */
   }
   
   .vertical-menu a:hover {
@@ -41,3 +56,52 @@ h1 {
     background-color: #4CAF50;
     color: white;
   }
+
+
+  /* ---CONTENT v0.1--- */
+  .content {/* This is the main content */
+    font-family: 'Courier New', Courier, monospace;
+    border-style: groove;
+    border-radius: 25px;
+    margin-left: 75px;
+    padding: 1px 10px; /* To center everything */
+    height: 1000px;
+    background-color: rgb(48, 48, 48);
+  }
+
+  .content p {
+/*     border-style: solid;  */    /* TESTING PURPOSE */
+    color: white;
+/*     background-color: rgb(163, 0, 0);
+    border-radius: 25px; */
+    margin: 5px;
+    padding: 10px;
+    line-height:20px
+  }
+
+ /* ---CODE BOX v0.1--- */
+.codeBox {
+  display: inline-block; /* MAKES IT INLINE-BLOCK THAT I CAN USE <br> */
+  box-shadow: 10px 5px 5px rgb(22, 22, 22); /* offset-x | offset-y | color */
+  margin: 10px;
+  padding: 5px;
+  background-color: black;
+  border-style: solid
+
+}
+
+
+
+/* & (ampersand) becomes &amp;
+" (double quote) becomes &quot; when ENT_NOQUOTES is not set.
+' (single quote) becomes &#039; only when ENT_QUOTES is set.
+< (less than) becomes &lt;
+> (greater than) becomes &gt; 
+*/
+
+
+
+/*  < = &lt;
+    > = &gt;    
+    (space) = &nbsp; 
+    */
