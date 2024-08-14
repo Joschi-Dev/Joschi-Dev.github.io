@@ -6,11 +6,13 @@
     --accent-color: #cf6679;
     --surface-color: #1e1e1e;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -18,11 +20,13 @@ body {
     background-color: var(--bg-color);
     overflow-x: hidden;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
+
 header {
     background-color: rgba(30, 30, 30, 0.8);
     backdrop-filter: blur(10px);
@@ -32,23 +36,28 @@ header {
     top: 0;
     z-index: 1000;
 }
+
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
 }
+
 nav ul li {
     margin: 0 15px;
 }
+
 nav ul li a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
     transition: color 0.3s ease;
 }
+
 nav ul li a:hover {
     color: var(--primary-color);
 }
+
 section {
     padding: 100px 0;
     min-height: 100vh;
@@ -56,15 +65,19 @@ section {
     align-items: center;
     justify-content: center;
 }
-h1, h2 {
+
+h1,
+h2 {
     margin-bottom: 20px;
 }
+
 .hero {
     background-color: var(--surface-color);
     text-align: center;
     position: relative;
     overflow: hidden;
 }
+
 .hero::before {
     content: '';
     position: absolute;
@@ -76,6 +89,7 @@ h1, h2 {
     opacity: 0.1;
     z-index: -1;
 }
+
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
@@ -84,11 +98,13 @@ h1, h2 {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
 .hero p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto 30px;
 }
+
 .btn {
     display: inline-block;
     background-color: var(--primary-color);
@@ -100,53 +116,39 @@ h1, h2 {
     transition: all 0.3s ease;
     border: 2px solid var(--primary-color);
 }
+
 .btn:hover {
     background-color: transparent;
     color: var(--primary-color);
 }
-.services {
-    background-color: var(--surface-color);
-}
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-.service-item {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-.service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.service-item i {
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-}
+
+
+
 .about {
     background-color: var(--bg-color);
 }
+
 .contact {
     background-color: var(--surface-color);
 }
+
 form {
     max-width: 500px;
     margin: 0 auto;
 }
+
 .form-group {
     margin-bottom: 20px;
 }
+
 label {
     display: block;
     margin-bottom: 5px;
     color: var(--secondary-color);
 }
-input, textarea {
+
+input,
+textarea {
     width: 100%;
     padding: 12px;
     background-color: rgba(255, 255, 255, 0.05);
@@ -155,10 +157,13 @@ input, textarea {
     color: var(--text-color);
     transition: border-color 0.3s ease;
 }
-input:focus, textarea:focus {
+
+input:focus,
+textarea:focus {
     outline: none;
     border-color: var(--primary-color);
 }
+
 button {
     background-color: var(--secondary-color);
     color: var(--bg-color);
@@ -169,27 +174,161 @@ button {
     transition: background-color 0.3s ease;
     font-weight: bold;
 }
+
 button:hover {
     background-color: var(--primary-color);
 }
+
 footer {
     background-color: var(--surface-color);
     color: var(--text-color);
     text-align: center;
     padding: 20px 0;
 }
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+    min-height: 270px;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.feature-icon {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #8a2be2;
+}
+
+.feature-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.learn-more-btn {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.learn-more-btn:hover {
+    background-color: #3a3a3a;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.feature-card:hover .feature-icon {
+    animation: pulse 1s infinite;
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: center;
     }
+
     nav ul li {
         margin: 10px 0;
     }
+
     .hero h1 {
         font-size: 2.5rem;
     }
+
     .hero p {
         font-size: 1rem;
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: rgba(30, 30, 30, 0.95);
+        backdrop-filter: blur(10px);
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
     }
 }

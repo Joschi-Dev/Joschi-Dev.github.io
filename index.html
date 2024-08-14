@@ -9,14 +9,21 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -28,33 +35,45 @@
             </div>
         </section>
 
-        <section id="services" class="services">
-            <div class="container">
-                <h2>Our Services</h2>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <i class="fas fa-code"></i>
-                        <h3>Web Development</h3>
-                        <p>Tailored websites that captivate and convert.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-robot"></i>
-                        <h3>AI Content Creation</h3>
-                        <p>Engaging content powered by advanced AI.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-search"></i>
-                        <h3>SEO Optimization</h3>
-                        <p>AI-driven strategies to boost your visibility.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-paint-brush"></i>
-                        <h3>Minimalist Design</h3>
-                        <p>Clean, modern aesthetics that leave an impact.</p>
-                    </div>
-                </div>
+        <section id="services" class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Analytics</h3>
+                <p class="feature-description">Monitor the performance of your startup and base decisions on data. Get website analytics with no extra setup.</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3 class="feature-title">Custom Forms</h3>
+                <p class="feature-description">Don't launch to crickets – build an audience for your startup. Collect leads directly within Umso, without any 3rd-party services.</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3 class="feature-title">User Management</h3>
+                <p class="feature-description">Enable collaborative work by giving guests access to your sites, projects & other resources.</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✍️</div>
+                <h3 class="feature-title">Blogs</h3>
+                <p class="feature-description">Produce new content, extend your reach, start appearing on Google. Add a simple blog to your site with a few clicks.</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🍪</div>
+                <h3 class="feature-title">Cookie Solution</h3>
+                <p class="feature-description">Set up cookie banners that help you respect your visitor's privacy. This is especially important for Europe.</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3 class="feature-title">Multilingual Sites</h3>
+                <p class="feature-description">Easily manage your website in multiple languages. With this feature you can offer your site to everyone.</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
             </div>
         </section>
+
 
         <section id="about" class="about">
             <div class="container">
@@ -62,6 +81,8 @@
                 <p>We're a team of forward-thinking developers and AI specialists, dedicated to pushing the boundaries of web technology. Our passion for minimalist design and AI-powered solutions drives us to create digital experiences that are not just visually stunning, but also intelligent and efficient.</p>
             </div>
         </section>
+
+
 
         <section id="contact" class="contact">
             <div class="container">
@@ -124,6 +145,24 @@
             item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(item);
         });
+
+        document.querySelectorAll('.feature-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+        const hamburger = document.querySelector('.hamburger-menu');
+    const navList = document.querySelector('.nav-list');
+
+    hamburger.addEventListener('click', () => {
+        navList.classList.toggle('show');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-list a').forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('show');
+        });
+    });
+        
     </script>
 </body>
 </html>
